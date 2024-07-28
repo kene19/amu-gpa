@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AMU GPA</title>
+    <link rel="stylesheet" href="css/sty.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/vaakash/socializer@f4c4e9/css/socializer.min.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.4.2/css/all.css">
+    
+</head>
+<body>
+  <div id="lod">
+    <div class="loader"></div>
+    <br><br>
+    <h2>Loading...</h2>
+  </div>
+  <section id="maii">
+  <section id="gon">
+    <div class="card">
+  <div id="con" class="">
+    <h3>AMU Student GPA Calculator</h3>
+    
+    <div class="input-group">
+      <input required="" type="text" name="text" autocomplete="on" class="input" id="mname">
+      <label class="user-label">Full Name</label>
+    </div>
+    <p id="pls"></p>
+    <br>
+    <p class="p1">Select Your Department</p>
+    <select name="hh" id="main"  >
+      <option value="elec"  class="optio">Electrical Engineering</option>
+      <option value="comp"  class="optio">Softwere Engineering</option>
+      <option value="it"    class="optio">Information Technology (IT)</option>
+      <option value="civil" class="optio" disabled>Civil Engineering</option>
+      <option value="com"   class="optio" disabled>Computer Science</option>
+      
+    </select>
+    <!-- <button class="btn1" >check</button> -->
+    <button class="button" onclick="fun()">
+      <span class="button_lg">
+          <span class="button_sl"></span>
+          <span class="button_text">submit</span>
+      </span>
+  </button>
+    <p id="err"></p>
+  </div>
+</div>
+
+<!-- Electrical -->
+
+  <div id="one" class="one">
+    
+  <div class="one2">
+  <img src="icon/back.png"  onclick="back()" class="back" title="back">
+  
+<!-- <button type="button" onclick="back()">back</button> -->
+<form action="">
+    <p class="Coures">Electrical Engineering</p>
+
+    
+    <input type="number" id="demo21" placeholder="Applied Mathematics-II" max="100" min="0">
+    <br>
+    
+    <input type="number" id="demo22" placeholder="Engineering Mechanics(Statics)" max="100" min="0">
+    <br>
+    <input type="number" id="demo23" placeholder="Economics" max="100" min="0">
+    <br>
+    <input type="number" id="demo24" placeholder=" Engineering Profession" max="100" min="0">
+    <br>
+    <input type="number" id="demo25" placeholder="Engineering Drawing" max="100" min="0">
+    <br>
+    <input type="number" id="demo26" placeholder="Probability and Random Process" max="100" min="0">
+    <br>
+    <input type="number" id="demo27" placeholder="Global Trends" max="100" min="0">
+    <br>
+
+    <button type="reset" value="number"  class="btn2">clear</button>
+    <a href="#dis"><button type="button" onclick="my()" class="btn2">submit</button></a>
+</form>
+</div>
+<div class="one1">
+  <h1 id="wellcome">&#128075  Wellcome To AMU Student GPA Calculator </h1>
+<div id="dis"  >
+
+  <!-- exit -->
+
+  <img src="icon/x.png" title="exit" onclick="exit()" class="exit">
+  <table id="dem" >
+    <thead>
+       <tr>
+        <td colspan="5" id="name"></td>
+        </tr>
+        
+        <tr>
+        <th>Coures Title</th>
+        <th>Credit Hour</th>
+        <th>Score</th>
+        <th>Grade</th>
+        <th>Grade Point</th>
+       </tr>
+    </thead>
+     <tbody>
+      <tr>
+      <td>Applied Mathematics-II</td>
+      <td>4</td>
+      <td id="demo1"></td>
+      <td id="demo19"></td>
+      <td id="crid"></td>
+      </tr>
+     </tbody>
+     <tbody>
+      <tr>
+      <td>Engineering Mechanics(Statics)</td>
+      <td>3</td>
+      <td id="demo2"></td>
+      <td id="demo20"></td>
+      <td id="cridd"></td>
+      </tr>
+    </tbody>
+    <tbody>
+      <tr>
+      <td>Introduction to Economics</td>
+      <td>3</td>
+      <td id="demo3"></td>
+      <td id="demo30"></td>
+      <td id="crid1"></td>
+      </tr>
+    </tbody>
+    <tbody>
+      <tr>
+      <td>Introduction to Engineering Profession</td>
+      <td>3</td>
+      <td id="demo4"></td>
+      <td id="demo40"></td>
+      <td id="crid2"></td>
+      </tr>
+    </tbody>
+    <tbody>
+      <tr>
+      <td> Engineering Drawing</td>
+      <td>3</td>
+      <td id="demo5"></td>
+      <td id="demo50"></td>
+      <td id="crid3"></td>
+      </tr>
+    </tbody>
+    <tbody>
+      <tr>
+      <td> Probability and Random Process</td>
+      <td>3</td>
+      <td id="demo6"></td>
+      <td id="demo60"></td>
+      <td id="crid4"></td>
+      </tr>
+    </tbody>
+    <tbody>
+      <tr>
+      <td> Global Trends</td>
+      <td>2</td>
+      <td id="demo7"></td>
+      <td id="demo70"></td>
+      <td id="crid5"></td>
+      </tr>
+    </tbody>
+    
+    
+    
+</table>
+
+<div class="gpa">
+<label for="">Total Credit Hour : <span >21 </span></label>
+<hr>
+<br>
+<label for="">Sum : <span id="sum"></span></label>
+<hr> 
+<br>
+<label for="">GPA : <span id="sum1"></span></label>
+<hr> 
+<br>
+<label for="">MAX : <span id="max"></span></label>
+<hr>
+  <br>
+<label for="">MIN  : <span id="max1"></span></label>
+</div>
+</div>
+
+<div class="foo">
+    
+  <div class="conta">
+    <h1 class="h1">Contact Us</h1>
+    <div class="socializer a sr-32px sr-circle sr-opacity sr-icon-white sr-pad" id="iconf"><span class="sr-email"><a href="mailto:mankanu54@gmail.com" target="_blank" title="Email"><i class="fa fa-envelope"></i></a></span><span class="sr-telegram"><a href="https:/t.me/Gunners389" target="_blank" title="Telegram"><i class="fab fa-telegram-plane"></i></a></span><span class="sr-github"><a href="https://github.com/kene19" target="_blank" title="Github"><i class="fab fa-github"></i></a></span><span class="sr-linkedin"><a href="https://www.linkedin.com/in/keneriyan-alemu-150abb2b7" target="_blank" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a></span></div>
+    
+    <hr>
+    <p class="foot2">&copy;2024 / POWERED BY KENERIYAN</p>
+  </div>
+  
+  
+</div>
+</div>
+</div>
+
+<!-- Softwere -->
+
+<div id="two" class="one">
+  <div class="one2">
+    <img src="icon/back.png"  onclick="back1()" class="back" title="back">
+    <!-- <button type="button" onclick="back1()">back</button> -->
+      <form action="">
+    
+          <p>Softwere Engineering</p>
+          <input type="number" id="demo31" placeholder="Fundamental Softwere" max="100" min="0">
+          <br>
+          <input type="number" id="demo32" placeholder="computer programming II" max="100" min="0">
+          <br>
+          <input type="number" id="demo33" placeholder="Economics" max="100" min="0">
+          <!-- <br>
+          <input type="number" id="demo34" placeholder="enter grade" max="100" min="0"> -->
+          <br>
+          <input type="number" id="demo35" placeholder="Discreat Mathematics" max="100" min="0">
+          <br>
+          <input type="number" id="demo36" placeholder="Data base" max="100" min="0">
+          <br>
+          <input type="number" id="demo37" placeholder="Global Trends" max="100" min="0">
+          <br>
+          <input type="number" id="demo38" placeholder="Inclusive" max="100" min="0">
+          <br>
+      
+          <button type="reset" value="number"   class="btn2">clear</button>
+          <a href="#dis1"> <button type="button" onclick="myk()" class="btn2">submit</button></a>
+      </form>
+      </div>
+  <div class="one1">
+    <h1 id="wellcome1">&#128075  Wellcome To AMU Student GPA Calculator </h1>
+  <div id="dis1" >
+
+    <img src="icon/x.png" title="exit" onclick="exit()" class="exit">
+    <table >
+      <thead>
+          <tr>
+            <td colspan="5" id="name1"></td>
+          </tr>
+          
+          <tr>
+          <th>Coures Title</th>
+          <th>Credit Hour</th>
+          <th>Score</th>
+          <th>Grade</th>
+          <th>Grade Point</th>
+         </tr>
+      </thead>
+       <tbody>
+        <tr>
+        <td>Fundamental Softwere</td>
+        <td>4</td>
+        <td id="dem1"></td>
+        <td id="dem19"></td>
+        <td id="cri"></td>
+        </tr>
+       </tbody>
+       <tbody>
+        <tr>
+        <td>computer programming II</td>
+        <td>3</td>
+        <td id="dem2"></td>
+        <td id="dem20"></td>
+        <td id="crids"></td>
+        </tr>
+      </tbody>
+      <tbody>
+        <tr>
+        <td>Introduction to Economics</td>
+        <td>3</td>
+        <td id="dem3"></td>
+        <td id="dem30"></td>
+        <td id="cri1"></td>
+        </tr>
+      </tbody>
+      <!-- <tbody>
+        <tr>
+        <td>Introduction to Engineering Profession</td>
+        <td>3</td>
+        <td id="dem4"></td>
+        <td id="dem40"></td>
+        <td id="cri2"></td>
+        </tr>
+      </tbody> -->
+      <tbody>
+        <tr>
+        <td> Discreat Mathematics</td>
+        <td>3</td>
+        <td id="dem5"></td>
+        <td id="dem50"></td>
+        <td id="cri3"></td>
+        </tr>
+      </tbody>
+      <tbody>
+        <tr>
+        <td> Data base</td>
+        <td>3</td>
+        <td id="dem6"></td>
+        <td id="dem60"></td>
+        <td id="cri4"></td>
+        </tr>
+      </tbody>
+     
+      <tbody>
+        <tr>
+        <td> Global Trends</td>
+        <td>2</td>
+        <td id="dem7"></td>
+        <td id="dem70"></td>
+        <td id="cri5"></td>
+        </tr>
+      </tbody>
+      <tbody>
+        <tr>
+        <td> Inclusive</td>
+        <td>2</td>
+        <td id="dem8"></td>
+        <td id="dem80"></td>
+        <td id="cri6"></td>
+        </tr>
+      </tbody>
+       
+       
+  </table>
+   <div class="gpa">
+   <label for="">Total Credit Hour : <span >20 </span></label>
+   <hr>
+   <br>
+   <label for=""> SUM :<span id="ssum"></span></label>
+   <hr> 
+   <br>
+   
+   <label for="">GPA :<span id="ssum1"></span></label> 
+   <hr> 
+   <br>
+   <label for="">MAX :<span id="smax"></span></label>
+   <hr> 
+   <br>
+  <label for="">MIN :<span id="smax1"></span></label>
+  </div>
+  
+</div>
+<div class="foo">
+    
+  <div class="conta">
+    <h1 class="h1">Contact Us</h1>
+    <div class="socializer a sr-32px sr-circle sr-opacity sr-icon-white sr-pad" id="iconf"><span class="sr-email"><a href="mailto:mankanu54@gmail.com" target="_blank" title="Email"><i class="fa fa-envelope"></i></a></span><span class="sr-telegram"><a href="https:/t.me/Gunners389" target="_blank" title="Telegram"><i class="fab fa-telegram-plane"></i></a></span><span class="sr-github"><a href="https://github.com/kene19" target="_blank" title="Github"><i class="fab fa-github"></i></a></span><span class="sr-linkedin"><a href="https://www.linkedin.com/in/keneriyan-alemu-150abb2b7" target="_blank" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a></span></div>
+    
+    <hr>
+    <p class="foot2">&copy;2024 / POWERED BY KENERIYAN</p>
+  </div>
+  
+  
+</div>
+</div>
+
+  </div>
+
+<!-- Information -->
+
+  <div id="three" class="one">
+    <div class="one2">
+
+      <img src="icon/back.png"  onclick="back2()" class="back" title="back">
+     
+        <form action="">
+            <p>Information Technology (IT)</p>
+            <input type="number" id="demo41" placeholder="Introduction to Statics" max="100" min="0">
+            <br>
+            <input type="number" id="demo42" placeholder="Fundamental of programming II" max="100" min="0">
+            <br>
+            <input type="number" id="demo43" placeholder="Economics" max="100" min="0">
+            <!-- <br>
+            <input type="number" id="demo34" placeholder="enter grade" max="100" min="0"> -->
+            <br>
+            <input type="number" id="demo45" placeholder="Electicity and Electronics Device" max="100" min="0">
+            <br>
+            <input type="number" id="demo46" placeholder="Data base" max="100" min="0">
+            <br>
+            <input type="number" id="demo47" placeholder="Global Trends" max="100" min="0">
+            <br>
+            <input type="number" id="demo48" placeholder="Inclusive" max="100" min="0">
+            <br>
+        
+            <button type="reset" value="number"   class="btn2" >clear</button>
+            <a href="#dis2"><button type="button" onclick="myt()" class="btn2">submit</button></a>
+        </form>
+      </div>
+    <div class="one1">
+      <h1 id="wellcome2">&#128075  Wellcome To AMU Student GPA Calculator </h1>
+    <div id="dis2" >
+      <img src="icon/x.png" title="exit" onclick="exit()" class="exit">
+      <table >
+        <thead>
+            <tr>
+              <td colspan="5" id="name2"></td>
+            </tr>
+            <tr>
+            <th>Coures Title</th>
+            <th>Credit Hour</th>
+            <th>Score</th>
+            <th>Grade</th>
+            <th>Grade Point</th>
+           </tr>
+        </thead>
+         <tbody>
+          <tr>
+          <td>Introduction to Statics</td>
+          <td>3</td>
+          <td id="de1"></td>
+          <td id="de19"></td>
+          <td id="cr"></td>
+          </tr>
+         </tbody>
+         <tbody>
+          <tr>
+          <td>Fundamental of programming II</td>
+          <td>3</td>
+          <td id="de2"></td>
+          <td id="de20"></td>
+          <td id="cridss"></td>
+          </tr>
+        </tbody>
+        <tbody>
+          <tr>
+          <td>Introduction to Economics</td>
+          <td>3</td>
+          <td id="de3"></td>
+          <td id="de30"></td>
+          <td id="cr1"></td>
+          </tr>
+        </tbody>
+        <!-- <tbody>
+          <tr>
+          <td>Introduction to Engineering Profession</td>
+          <td>3</td>
+          <td id="dem4"></td>
+          <td id="dem40"></td>
+          <td id="cri2"></td>
+          </tr>
+        </tbody> -->
+        <tbody>
+          <tr>
+          <td> Fundamental of Electicity and Electronics Device</td>
+          <td>3</td>
+          <td id="de5"></td>
+          <td id="de50"></td>
+          <td id="cr3"></td>
+          </tr>
+        </tbody>
+        <tbody>
+          <tr>
+          <td> Data base</td>
+          <td>3</td>
+          <td id="de6"></td>
+          <td id="de60"></td>
+          <td id="cr4"></td>
+          </tr>
+        </tbody>
+       
+        <tbody>
+          <tr>
+          <td> Global Trends</td>
+          <td>2</td>
+          <td id="de7"></td>
+          <td id="de70"></td>
+          <td id="cr5"></td>
+          </tr>
+        </tbody>
+        <tbody>
+          <tr>
+          <td> Inclusive</td>
+          <td>2</td>
+          <td id="de8"></td>
+          <td id="de80"></td>
+          <td id="cr6"></td>
+          </tr>
+        </tbody>
+         
+         
+    </table>
+    <div class="gpa">
+    <label for="">Total Credit Hour :<span >19 </span></label>
+    <hr>
+    <br>
+    <label for="">SUM : <span id="tsum"></span></label> 
+    <hr>
+    <br>
+    <label for="">GPA : <span id="tsum1"></span></label>
+    <hr> 
+    <br>
+    <label for="">MAX : <span id="tmax"></span></label>
+    <hr>
+    <br>
+    <label for="">MIN : <span id="tmax1"></span></label>
+    </div>
+    
+  </div>
+  <div class="foo">
+    
+    <div class="conta">
+      <h1 class="h1">Contact Us</h1>
+      <div class="socializer a sr-32px sr-circle sr-opacity sr-icon-white sr-pad" id="iconf"><span class="sr-email"><a href="mailto:mankanu54@gmail.com" target="_blank" title="Email"><i class="fa fa-envelope"></i></a></span><span class="sr-telegram"><a href="https:/t.me/Gunners389" target="_blank" title="Telegram"><i class="fab fa-telegram-plane"></i></a></span><span class="sr-github"><a href="https://github.com/kene19" target="_blank" title="Github"><i class="fab fa-github"></i></a></span><span class="sr-linkedin"><a href="https://www.linkedin.com/in/keneriyan-alemu-150abb2b7" target="_blank" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a></span></div>
+      
+      <hr>
+      <p class="foot2">&copy;2024 / POWERED BY KENERIYAN</p>
+    </div>
+    
+    
+  </div>
+</div>
+
+
+  
+    </div>
+    
+  </section>
+
+</section>
+
+
+    <script src="js/bb1.js"></script>
+</body>
+</html>
